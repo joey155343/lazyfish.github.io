@@ -1,7 +1,8 @@
 module.exports = {
     title: 'Hello VuePress',
     description: 'Just playing around',
-    base: '/stock-profolio/',
+    base: '/BlogVuePress/',
+    theme: "reco",
     themeConfig: {
         //導航欄
         nav: [
@@ -22,17 +23,19 @@ module.exports = {
                 ]
             }
         ],
-        sidebar: [
-            '/StockProfolioDocs/',
-            '/StockProfolioDocs/Category_1/',
-            {
-                title: '類別2',
-                path: '/StockProfolioDocs/Category_2',
-                children: [
-                    '/StockProfolioDocs/Category_2/test1.md',
-                    '/StockProfolioDocs/Category_2/test2.md',
-                ]
-            }
-        ]
+        sidebar: {
+            '/StockProfolioDocs/': [
+                '/StockProfolioDocs/',
+                '/StockProfolioDocs/Category_1/',
+                {
+                    title: '類別2',
+                    path: '/StockProfolioDocs/Category_2',
+                    children: [
+                        '/StockProfolioDocs/Category_2/test1.md',
+                        '/StockProfolioDocs/Category_2/test2.md',
+                    ]
+                }
+            ],
+        }
     }
 }
